@@ -1,0 +1,6 @@
+es:
+  app_name: 'IVD'
+  meta_title: 'Banco de alimento'
+  dashboard:
+    index:
+      title: 'Bienvenido a IVD'

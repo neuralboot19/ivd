@@ -1,6 +1,31 @@
 en:
   app_name: 'IVD'
   meta_title: 'Food bank'
+  activerecord:
+    models:
+      user: User
+    attributes:
+      user:
+        email: 'Email'
+        username: 'Username'
+        password: 'Password'
+  common:
+    confirm: 'Are you sure?'
+    not_logged_in: 'You have to login or create an account'
   dashboard:
     index:
       title: 'Welcome to IVD'
+  shared:
+    header:
+      login: 'Login'
+      logout: 'Logout'
+  authentication:
+    sessions:
+      create:
+        created: 'Welcome!'
+        failed: 'Invalid login!'
+      destroy:
+        destroyed: 'Session ended. Bye!'
+      new:
+        email_placeholder: 'Email'
+        password_placeholder: 'Password'

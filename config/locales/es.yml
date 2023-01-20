@@ -1,6 +1,31 @@
 es:
   app_name: 'IVD'
   meta_title: 'Banco de alimento'
+  activerecord:
+    models:
+      user: Usuario
+    attributes:
+      user:
+        email: 'Correo electrónico'
+        username: 'Usuario'
+        password: 'Contraseña'
+  common:
+    confirm: '¿Estás seguro?'
+    not_logged_in: 'Tienes que hacer login o crearte una cuenta'
   dashboard:
     index:
       title: 'Bienvenido a IVD'
+  shared:
+    header:
+      login: 'Acceso'
+      logout: 'Salir'
+  authentication:
+    sessions:
+      create:
+        created: 'Bienvenido!'
+        failed: 'Login inválido!'
+      destroy:
+        destroyed: 'Tu sesión ha terminado! Hasta la próxima'
+      new:
+        email_placeholder: 'Correo electrónico'
+        password_placeholder: 'Contraseña'

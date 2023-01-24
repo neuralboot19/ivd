@@ -12,6 +12,7 @@ es:
   common:
     confirm: '¿Estás seguro?'
     not_logged_in: 'Tienes que hacer login o crearte una cuenta'
+    not_authorized: 'No tienes permisos para esta acción'
   dashboard:
     index:
       title: 'Bienvenido a IVD'

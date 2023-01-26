@@ -10,9 +10,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_23_120209) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_24_170033) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "beneficiaries", force: :cascade do |t|
+    t.string "email"
+    t.string "full_name"
+    t.string "birthday"
+    t.string "signature"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "cel_phone"
+    t.string "address"
+    t.string "status_documents"
+    t.string "family_unit"
+    t.string "terms_conditions"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contries", force: :cascade do |t|
+    t.string "name"
+    t.string "iso"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "identifications", force: :cascade do |t|
+    t.string "type_identification"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "code_municipality"
+    t.string "name_municipality"
+    t.string "code_ine_municipality"
+    t.string "code_nuts_4"
+    t.string "name_nuts_4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "provinces", force: :cascade do |t|
+    t.string "code"
+    t.string "postal_code"
+    t.string "name"
+    t.string "phone_code"
+    t.string "iso_2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "roads", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false

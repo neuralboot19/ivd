@@ -4,6 +4,12 @@ en:
   activerecord:
     models:
       user: User
+      beneficiary: Beneficiary
+      contry: Contry
+      identification: Identification
+      location: Location
+      province: Province
+      road: Road
     attributes:
       user:
         email: 'Email'

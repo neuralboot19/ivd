@@ -16,6 +16,10 @@ class User < ApplicationRecord
 
   before_save :downcase_attributes
 
+  def owner?
+    id == Current.user&.id
+  end
+
   private
 
   def downcase_attributes

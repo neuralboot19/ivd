@@ -15,15 +15,20 @@ en:
         email: 'Email'
         username: 'Username'
         password: 'Password'
+        super_admin: 'Super administrator'
+        admin: 'Administrator'
   common:
     confirm: 'Are you sure?'
-    not_logged_in: 'You have to login or create an account'
+    back: 'Go back'
+    not_logged_in: 'You have to login'
     not_authorized: 'You don not have permissions for this action'
+    not_found: 'Not found'
   dashboard:
     index:
       title: 'Welcome to IVD'
   shared:
-    header:
+    items:
+      users: 'User'
       login: 'Login'
       logout: 'Logout'
   authentication:
@@ -36,3 +41,20 @@ en:
       new:
         email_placeholder: 'Email'
         password_placeholder: 'Password'
+  users:
+    edit:
+      title: 'Edit user'
+    new:
+      title: 'New user'
+    index:
+      title: 'Users'
+      new: 'New user'
+    user:
+      edit: 'Edit'
+      delete: 'Delete'
+    create:
+      created: 'User created successfully'
+    update:
+      updated: 'The user was updated successfully'
+    destroy:
+      destroyed: 'The user was removed successfully'

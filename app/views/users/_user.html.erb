@@ -1,0 +1,10 @@
+<div id="<%= dom_id user %>" class="user">
+  <%= user.email %>
+  <%= user.username %>
+  <!-- <%= link_to "Show this user", user %> -->
+  <%= link_to t('.edit'), edit_user_path(user) %>
+  <%= link_to t('.delete'), user_path(user), data: {
+    turbo_method: :delete,
+    turbo_confirm: t('common.confirm')
+  } unless user.owner? %>
+</div>

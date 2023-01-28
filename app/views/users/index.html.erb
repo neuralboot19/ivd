@@ -1,0 +1,8 @@
+<h2>
+  <span><%= t('.title') %></span>
+  <span><%= link_to t('.new'), new_user_path %></span>
+</h2>
+
+<%= turbo_frame_tag :users do %>
+  <%= render partial: 'user', collection: @users %>
+<% end %>

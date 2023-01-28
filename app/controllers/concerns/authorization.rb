@@ -5,7 +5,7 @@ module Authorization
     class NotAuthorizedError < StandardError; end
 
     rescue_from NotAuthorizedError do
-      redirect_to products_path, alert: t('common.not_authorized')
+      redirect_to root_path, alert: t('common.not_authorized')
     end
 
     private

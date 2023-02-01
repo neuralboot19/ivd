@@ -1,0 +1,18 @@
+<div id="<%= dom_id beneficiary %>" class="beneficiary">
+  <%= beneficiary.names %>
+  <%= beneficiary.email %>
+  <%= beneficiary.first_surname %>
+  <%= beneficiary.second_surname %>
+  <%= beneficiary.cel_phone %>
+  <%= beneficiary.born.strftime("%Y-%m-%d") %>
+  <%= beneficiary.other_address %>
+  <%= beneficiary.expiration_date_document.strftime("%Y-%m-%d") %>
+  <%= beneficiary.status_document %>
+  <%= beneficiary.family_unit %>
+  <%= beneficiary.terms_conditions %>
+  <%= link_to t('.edit'), edit_beneficiary_path(beneficiary) %>
+  <%= link_to t('.delete'), beneficiary_path(beneficiary), data: {
+    turbo_method: :delete,
+    turbo_confirm: t('common.confirm')
+  } %>
+</div>

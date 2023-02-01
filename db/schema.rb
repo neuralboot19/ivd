@@ -10,22 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_24_170033) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_28_145405) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "beneficiaries", force: :cascade do |t|
+    t.string "names"
     t.string "email"
-    t.string "full_name"
-    t.string "birthday"
-    t.string "signature"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "cel_phone"
-    t.string "address"
-    t.string "status_documents"
-    t.string "family_unit"
-    t.string "terms_conditions"
+    t.string "first_surname"
+    t.string "second_surname"
+    t.integer "cel_phone", default: 0, null: false
+    t.datetime "born"
+    t.string "other_address"
+    t.datetime "expiration_date_document"
+    t.boolean "status_document", default: false
+    t.integer "family_unit", default: 1, null: false
+    t.boolean "terms_conditions", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

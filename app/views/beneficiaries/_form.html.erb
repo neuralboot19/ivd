@@ -1,0 +1,72 @@
+<%= form_with(model: @beneficiary) do |form| %>
+  <% if @beneficiary.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@beneficiary.errors.count, "error") %> prohibited this beneficiary from being saved:</h2>
+
+      <ul>
+        <% @beneficiary.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :names %>
+    <%= form.text_field :names, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :first_surname %>
+    <%= form.text_field :first_surname, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :second_surname %>
+    <%= form.text_field :second_surname, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :email %>
+    <%= form.text_field :email, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :cel_phone %>
+    <%= form.number_field :cel_phone, required: true, max: 999999999 %>
+  </div>
+
+  <div>
+    <%= form.label :born %>
+    <%= form.text_field :born, required: true, type: :date, value: form.object.born.try(:strftime,"%Y-%m-%d") %>
+  </div>
+
+  <div>
+    <%= form.label :other_address %>
+    <%= form.text_field :other_address, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :expiration_date_document %>
+    <%= form.text_field :expiration_date_document, required: true, type: :date, value: form.object.expiration_date_document.try(:strftime,"%Y-%m-%d") %>
+  </div>
+
+  <div>
+    <%= form.label :status_document %>
+    <%= form.check_box :status_document %>
+  </div>
+
+  <div>
+    <%= form.label :family_unit %>
+    <%= form.number_field :family_unit, required: true, max: 99 %>
+  </div>
+
+  <div>
+    <%= form.label :terms_conditions %>
+    <%= form.check_box :terms_conditions %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

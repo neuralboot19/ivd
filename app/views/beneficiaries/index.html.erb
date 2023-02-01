@@ -1,0 +1,8 @@
+<h2>
+  <span><%= t('.title') %></span>
+  <span><%= link_to t('.new'), new_beneficiary_path %></span>
+</h2>
+
+<%= turbo_frame_tag :beneficiaries do %>
+  <%= render partial: 'beneficiary', collection: @beneficiaries %>
+<% end %>

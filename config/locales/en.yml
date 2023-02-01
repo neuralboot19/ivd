@@ -17,6 +17,18 @@ en:
         password: 'Password'
         super_admin: 'Super administrator'
         admin: 'Administrator'
+      beneficiary:
+        names: 'Full Name'
+        email: 'Email'
+        first_surname: 'First surname'
+        second_surname: 'Second surname'
+        cel_phone: 'Cell phone'
+        born: 'Date of birth'
+        other_address: 'Other address'
+        expiration_date_document: 'Expiration date document'
+        status_document: 'Status document'
+        family_unit: 'Family unit'
+        terms_conditions: 'Terms conditions'
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
@@ -29,6 +41,7 @@ en:
   shared:
     items:
       users: 'User'
+      beneficiaries: 'Beneficiaries'
       login: 'Login'
       logout: 'Logout'
   authentication:
@@ -58,3 +71,20 @@ en:
       updated: 'The user was updated successfully'
     destroy:
       destroyed: 'The user was removed successfully'
+  beneficiaries:
+    edit:
+      title: 'Edit beneficiary'
+    new:
+      title: 'New beneficiary'
+    index:
+      title: 'Beneficiaries'
+      new: 'New beneficiary'
+    beneficiary:
+      edit: 'Edit'
+      delete: 'Delete'
+    create:
+      created: 'Beneficiary created successfully'
+    update:
+      updated: 'The beneficiary was updated successfully'
+    destroy:
+      destroyed: 'The beneficiary was removed successfully'

@@ -17,6 +17,18 @@ es:
         password: 'Contraseña'
         super_admin: 'Super administrador'
         admin: 'Administrador'
+      beneficiary:
+        names: 'Nombre completo'
+        email: 'Correo electrónico'
+        first_surname: 'Primer apellido'
+        second_surname: 'Segundo apellido'
+        cel_phone: 'Teléfono móvil'
+        born: 'Fecha de nacimiento'
+        other_address: 'Otra dirección'
+        expiration_date_document: 'Fecha de caducidad Padrón'
+        status_document: 'Estado del Padró Activo'
+        family_unit: 'Unidad familiar'
+        terms_conditions: 'Términos y condiciones'
   common:
     confirm: '¿Estás seguro?'
     back: 'Regresa'
@@ -29,6 +41,7 @@ es:
   shared:
     items:
       users: 'Usuarios'
+      beneficiaries: 'Beneficiarios'
       login: 'Acceso'
       logout: 'Salir'
   authentication:
@@ -58,3 +71,20 @@ es:
       updated: 'Se actualizo el usuario correctamente'
     destroy:
       destroyed: 'Se elimino el usuario correctamente'
+  beneficiaries:
+    edit:
+      title: 'Editar beneficiario'
+    new:
+      title: 'Añadir beneficiario'
+    index:
+      title: 'Beneficiarios'
+      new: 'Nuevo beneficiario'
+    beneficiary:
+      edit: 'Editar'
+      delete: 'Eliminar'
+    create:
+      created: 'Beneficiario creado correctamente'
+    update:
+      updated: 'Se actualizo el beneficiario correctamente'
+    destroy:
+      destroyed: 'Se elimino el beneficiario correctamente'

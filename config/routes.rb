@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   end
 
   resources :users, except: :show
+  resources :beneficiaries, except: :show
   root "dashboard#index"
 end

@@ -3,7 +3,7 @@ class BeneficiariesController < ApplicationController
   before_action :set_beneficiary, only: %i[ edit update destroy ]
 
   def index
-    @beneficiaries = Beneficiary.all
+    @beneficiaries = Beneficiary.order(created_at: :desc).load_async
   end
 
   def new

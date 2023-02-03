@@ -3,7 +3,7 @@ class DeliveriesController < ApplicationController
   before_action :set_beneficiaries_search, only: %i[ new edit ]
 
   def index
-    @deliveries = Delivery.all
+    @deliveries = Delivery.order(created_at: :desc).load_async
   end
 
   def new
@@ -43,7 +43,7 @@ class DeliveriesController < ApplicationController
     end
 
     def set_beneficiaries_search
-      @beneficiaries ||= Beneficiary.where(status_document: true, terms_conditions: true).order(created_at: :desc)
+      @beneficiaries ||= Beneficiary.where(status_document: true, terms_conditions: true).order(created_at: :desc).load_async
     end
 
     def delivery_params

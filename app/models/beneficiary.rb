@@ -11,6 +11,8 @@ class Beneficiary < ApplicationRecord
   validate :expiration_date_cannot_be_in_the_past_document
   validate :expiration_date_cannot_be_in_the_past_born
 
+  has_many :deliveries, dependent: :destroy
+
   before_save :downcase_attributes
 
   private

@@ -1,0 +1,26 @@
+<%= form_with(model: @delivery) do |form| %>
+  <% if @delivery.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@delivery.errors.count, "error") %> prohibited this delivery from being saved:</h2>
+
+      <ul>
+        <% @delivery.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.collection_select :beneficiary_id, @beneficiaries, :id, :names %>
+  </div>
+
+  <div>
+    <%= form.label :kg %>
+    <%= form.text_field :kg %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

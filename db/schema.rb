@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_28_145405) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_03_125721) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -35,6 +35,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_28_145405) do
     t.string "iso"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "deliveries", force: :cascade do |t|
+    t.string "kg", default: "0.0", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "beneficiary_id", null: false
+    t.index ["beneficiary_id"], name: "index_deliveries_on_beneficiary_id"
   end
 
   create_table "identifications", force: :cascade do |t|
@@ -81,4 +89,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_28_145405) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "deliveries", "beneficiaries"
 end

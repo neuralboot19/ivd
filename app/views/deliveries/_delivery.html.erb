@@ -1,0 +1,9 @@
+<div id="<%= dom_id delivery %>" class="delivery">
+  <%= delivery.beneficiary.names %>
+  <%= delivery.kg %>
+  <%= link_to t('.edit'), edit_delivery_path(delivery) %>
+  <%= link_to t('.delete'), delivery_path(delivery), data: {
+    turbo_method: :delete,
+    turbo_confirm: t('common.confirm')
+  } %>
+</div>

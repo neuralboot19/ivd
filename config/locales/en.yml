@@ -10,6 +10,7 @@ en:
       location: Location
       province: Province
       road: Road
+      delivery: delivery
     attributes:
       user:
         email: 'Email'
@@ -29,6 +30,8 @@ en:
         status_document: 'Status document'
         family_unit: 'Family unit'
         terms_conditions: 'Terms conditions'
+      delivery:
+        kg: 'Weight in kilograms'
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
@@ -42,6 +45,7 @@ en:
     items:
       users: 'User'
       beneficiaries: 'Beneficiaries'
+      deliveries: 'Deliveries'
       login: 'Login'
       logout: 'Logout'
   authentication:
@@ -88,3 +92,20 @@ en:
       updated: 'The beneficiary was updated successfully'
     destroy:
       destroyed: 'The beneficiary was removed successfully'
+  deliveries:
+    edit:
+      title: 'Edit delivery'
+    new:
+      title: 'New delivery'
+    index:
+      title: 'Deliveries'
+      new: 'New delivery'
+    delivery:
+      edit: 'Edit'
+      delete: 'Delete'
+    create:
+      created: 'Delivery created successfully'
+    update:
+      updated: 'The delivery was updated successfully'
+    destroy:
+      destroyed: 'The delivery was removed successfully'

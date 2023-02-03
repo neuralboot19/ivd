@@ -1,0 +1,8 @@
+<h2>
+  <span><%= t('.title') %></span>
+  <span><%= link_to t('.new'), new_delivery_path %></span>
+</h2>
+
+<%= turbo_frame_tag :deliveries do %>
+  <%= render partial: 'delivery', collection: @deliveries %>
+<% end %>

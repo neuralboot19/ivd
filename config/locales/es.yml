@@ -10,6 +10,7 @@ es:
       location: Localización
       province: Provincia
       road: Road
+      delivery: Entregas
     attributes:
       user:
         email: 'Correo electrónico'
@@ -29,6 +30,8 @@ es:
         status_document: 'Estado del Padró Activo'
         family_unit: 'Unidad familiar'
         terms_conditions: 'Términos y condiciones'
+      delivery:
+        kg: 'Peso en kilogramos'
   common:
     confirm: '¿Estás seguro?'
     back: 'Regresa'
@@ -42,6 +45,7 @@ es:
     items:
       users: 'Usuarios'
       beneficiaries: 'Beneficiarios'
+      deliveries: 'Entregas'
       login: 'Acceso'
       logout: 'Salir'
   authentication:
@@ -88,3 +92,20 @@ es:
       updated: 'Se actualizo el beneficiario correctamente'
     destroy:
       destroyed: 'Se elimino el beneficiario correctamente'
+  deliveries:
+    edit:
+      title: 'Editar entrega'
+    new:
+      title: 'Añadir entrega'
+    index:
+      title: 'Entregas'
+      new: 'Nueva entrega'
+    delivery:
+      edit: 'Editar'
+      delete: 'Eliminar'
+    create:
+      created: 'Entrega creada correctamente'
+    update:
+      updated: 'Se actualizo la entrega correctamente'
+    destroy:
+      destroyed: 'Se elimino la entrega correctamente'

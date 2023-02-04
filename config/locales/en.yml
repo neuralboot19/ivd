@@ -46,6 +46,7 @@ en:
       users: 'User'
       beneficiaries: 'Beneficiaries'
       deliveries: 'Deliveries'
+      queries: 'Queries'
       login: 'Login'
       logout: 'Logout'
   authentication:
@@ -109,3 +110,6 @@ en:
       updated: 'The delivery was updated successfully'
     destroy:
       destroyed: 'The delivery was removed successfully'
+  queries:
+    index:
+      title: 'Queries'

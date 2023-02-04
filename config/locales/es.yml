@@ -46,6 +46,7 @@ es:
       users: 'Usuarios'
       beneficiaries: 'Beneficiarios'
       deliveries: 'Entregas'
+      queries: 'Reportes'
       login: 'Acceso'
       logout: 'Salir'
   authentication:
@@ -109,3 +110,6 @@ es:
       updated: 'Se actualizo la entrega correctamente'
     destroy:
       destroyed: 'Se elimino la entrega correctamente'
+  queries:
+    index:
+      title: 'Reportes'

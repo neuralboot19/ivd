@@ -12,7 +12,13 @@
 
   <body>
     <%= render 'shared/flash' %>
-    <%= render 'shared/header' %>
-    <%= yield %>
+    <div class="d-flex align-items-start">
+      <div class="nav flex-column nav-pills me-3 bg-light vh-100 p-4">
+        <%= render 'shared/nav_vertical' %>
+      </div>
+      <div class="container-fluid p-4">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

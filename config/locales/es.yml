@@ -57,8 +57,10 @@ es:
       destroy:
         destroyed: 'Tu sesión ha terminado! Hasta la próxima'
       new:
-        email_placeholder: 'Correo electrónico'
+        title: 'Inicia sesión en IVD'
+        email_placeholder: 'Correo electrónico ó Usuario'
         password_placeholder: 'Contraseña'
+        submit: 'Iniciar sesión'
   users:
     edit:
       title: 'Editar usuario'

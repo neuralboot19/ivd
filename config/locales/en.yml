@@ -57,8 +57,10 @@ en:
       destroy:
         destroyed: 'Session ended. Bye!'
       new:
-        email_placeholder: 'Email'
+        title: 'Sign in to IVD'
+        email_placeholder: 'Email or User Name'
         password_placeholder: 'Password'
+        submit: 'Sign in'
   users:
     edit:
       title: 'Edit user'

@@ -1,13 +1,18 @@
-<%= form_with(url: sessions_path) do |form| %>
-  <div>
-    <%= form.text_field :login, required: true, placeholder: t(".email_placeholder") %>
+<div class="row vh-100 justify-content-center align-items-center">
+  <div class="col-md-3 col-sm-3">
+    <%= form_with(url: sessions_path) do |form| %>
+      <legend><%= t(".title") %></legend>
+      <div class="form-floating mb-3">
+        <%= form.text_field :login, class: "form-control", required: true, placeholder: t(".email_placeholder") %>
+        <%= form.label t(".email_placeholder"), for: "floatingInput" %>
+      </div>
+      <div class="form-floating mb-3">
+        <%= form.password_field :password, class: "form-control", required: true, placeholder: t(".password_placeholder") %>
+        <%= form.label t(".password_placeholder"), for: "floatingPassword" %>
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary btn-lg"><%= t(".submit") %></button>
+      </div>
+    <% end %>
   </div>
-
-  <div>
-    <%= form.password_field :password, required: true, placeholder: t(".password_placeholder") %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

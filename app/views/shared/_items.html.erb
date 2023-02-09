@@ -1,7 +1,8 @@
-<%= link_to t('.users'), users_path, class: "nav-link" if Current.user&.super_admin? %>
-<%= link_to t('.beneficiaries'), beneficiaries_path, class: "nav-link" if Current.user&.super_admin? || Current.user&.admin? %>
-<%= link_to t('.deliveries'), deliveries_path, class: "nav-link" if Current.user %>
-<%= link_to t('.queries'), queries_path, class: "nav-link" if Current.user&.super_admin? || Current.user&.admin? %>
+<%= render(ItemUserComponent.new) if Current.user&.super_admin? %>
+<%= render(ItemBeneficiaryComponent.new) if Current.user&.super_admin? || Current.user&.admin? %>
+<%= render(ItemDeliveryComponent.new) if Current.user %>
+<%= render(ItemQueryComponent.new) if Current.user&.super_admin? || Current.user&.admin? %>
+
 <!-- <%= link_to t('.login'), new_session_path, class: "nav-link" unless Current.user %> -->
 <%= link_to t('.logout'), session_path(Current.user.id), data: {
   turbo_method: :delete,

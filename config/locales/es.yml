@@ -43,10 +43,10 @@ es:
       title: 'Bienvenido a IVD'
   shared:
     items:
-      users: 'Usuarios'
-      beneficiaries: 'Beneficiarios'
-      deliveries: 'Entregas'
-      queries: 'Reportes'
+      # users: 'Usuarios'
+      # beneficiaries: 'Beneficiarios'
+      # deliveries: 'Entregas'
+      # queries: 'Reportes'
       login: 'Acceso'
       logout: 'Salir'
   authentication:

@@ -1,5 +1,6 @@
 class Authentication::SessionsController < ApplicationController
   skip_before_action :protect_pages
+  before_action :is_authentication, except: %i[ destroy ]
 
   def new
   end
@@ -17,7 +18,13 @@ class Authentication::SessionsController < ApplicationController
   
   def destroy
     session.delete(:user_id)
-
     redirect_to root_path, notice: t('.destroyed')
   end
+
+  private
+
+  def is_authentication
+    redirect_to root_path, alert: t('common.not_authorized') if Current.user.present?
+  end
+
 end

@@ -78,6 +78,10 @@ en:
       updated: 'The user was updated successfully'
     destroy:
       destroyed: 'The user was removed successfully'
+    form:
+      email: 'Email'
+      username: 'Username'
+      password: 'Password'
   beneficiaries:
     edit:
       title: 'Edit beneficiary'
@@ -89,12 +93,22 @@ en:
     beneficiary:
       edit: 'Edit'
       delete: 'Delete'
+      contact: 'Contact'
+      document_active: 'Document status'
+      family: 'Family'
     create:
       created: 'Beneficiary created successfully'
     update:
       updated: 'The beneficiary was updated successfully'
     destroy:
       destroyed: 'The beneficiary was removed successfully'
+    form:
+      names: 'Full Name'
+      email: 'Email'
+      first_surname: 'First surname'
+      second_surname: 'Second surname'
+      cel_phone: 'Cell phone'
+      other_address: 'Other address'
   deliveries:
     edit:
       title: 'Edit delivery'
@@ -112,6 +126,8 @@ en:
       updated: 'The delivery was updated successfully'
     destroy:
       destroyed: 'The delivery was removed successfully'
+    form:
+      select: 'Select Beneficiary'
   queries:
     index:
       title: 'Queries'

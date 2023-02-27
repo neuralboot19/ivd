@@ -1,18 +1,39 @@
-<div id="<%= dom_id beneficiary %>" class="beneficiary">
-  <%= beneficiary.names %>
-  <%= beneficiary.email %>
-  <%= beneficiary.first_surname %>
-  <%= beneficiary.second_surname %>
-  <%= beneficiary.cel_phone %>
-  <%= beneficiary.born.strftime("%Y-%m-%d") %>
-  <%= beneficiary.other_address %>
-  <%= beneficiary.expiration_date_document.strftime("%Y-%m-%d") %>
-  <%= beneficiary.status_document %>
-  <%= beneficiary.family_unit %>
-  <%= beneficiary.terms_conditions %>
-  <%= link_to t('.edit'), edit_beneficiary_path(beneficiary) %>
-  <%= link_to t('.delete'), beneficiary_path(beneficiary), data: {
-    turbo_method: :delete,
-    turbo_confirm: t('common.confirm')
-  } %>
+<div id="<%= dom_id beneficiary %>" class="beneficiary col">
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <%= image_tag 'avatar.jpg', class: 'img-fluid rounded-start', alt: 'Avatar Beneficiary' %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body p-2 py-1">
+          <!-- <h5 class="card-title"></h5> -->
+          <p class="card-text m-0">
+            <span><%= beneficiary.names %> <%= beneficiary.first_surname %></span>
+            <br>
+            <small class="text-muted">
+              <span><%= t('.contact') %></span>
+              <%= beneficiary.cel_phone %>
+            </small>
+            <br>
+            <small class="text-muted">
+              <span><%= t('.document_active') %></span>
+              <%= beneficiary.status_document %> <%= beneficiary.expiration_date_document.strftime("%Y-%m-%d") %>
+            </small>
+            <br>
+            <small class="text-muted">
+              <span><%= t('.family') %></span>
+              <%= beneficiary.family_unit %>
+            </small>
+          </p>
+          <span class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <%= link_to t('.edit'), edit_beneficiary_path(beneficiary), class: 'me-md-2' %>
+            <%= link_to t('.delete'), beneficiary_path(beneficiary), data: {
+              turbo_method: :delete,
+              turbo_confirm: t('common.confirm')
+            } %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -3,6 +3,6 @@
   <span><%= link_to t('.new'), new_user_path %></span>
 </h2>
 
-<%= turbo_frame_tag :users do %>
+<%= turbo_frame_tag :users, class: "row row-cols-1 row-cols-md-3 g-4" do %>
   <%= render partial: 'user', collection: @users %>
 <% end %>

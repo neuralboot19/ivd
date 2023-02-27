@@ -3,6 +3,6 @@
   <span><%= link_to t('.new'), new_beneficiary_path %></span>
 </h2>
 
-<%= turbo_frame_tag :beneficiaries do %>
+<%= turbo_frame_tag :beneficiaries, class: "row row-cols-1 row-cols-md-3 g-4" do %>
   <%= render partial: 'beneficiary', collection: @beneficiaries %>
 <% end %>

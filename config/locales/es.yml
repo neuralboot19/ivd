@@ -65,7 +65,7 @@ es:
     edit:
       title: 'Editar usuario'
     new:
-      title: 'Añadir usuario'
+      title: 'Nuevo usuario'
     index:
       title: 'Usuarios'
       new: 'Nuevo usuario'
@@ -78,6 +78,10 @@ es:
       updated: 'Se actualizo el usuario correctamente'
     destroy:
       destroyed: 'Se elimino el usuario correctamente'
+    form:
+      email: 'Correo electrónico'
+      username: 'Usuario'
+      password: 'Contraseña'
   beneficiaries:
     edit:
       title: 'Editar beneficiario'
@@ -89,12 +93,22 @@ es:
     beneficiary:
       edit: 'Editar'
       delete: 'Eliminar'
+      contact: 'Contacto'
+      document_active: 'Estado del padrón'
+      family: 'Familiares'
     create:
       created: 'Beneficiario creado correctamente'
     update:
       updated: 'Se actualizo el beneficiario correctamente'
     destroy:
       destroyed: 'Se elimino el beneficiario correctamente'
+    form:
+      names: 'Nombre completo'
+      email: 'Correo electrónico'
+      first_surname: 'Primer apellido'
+      second_surname: 'Segundo apellido'
+      cel_phone: 'Teléfono móvil'
+      other_address: 'Otra dirección'
   deliveries:
     edit:
       title: 'Editar entrega'
@@ -112,6 +126,8 @@ es:
       updated: 'Se actualizo la entrega correctamente'
     destroy:
       destroyed: 'Se elimino la entrega correctamente'
+    form:
+      select: 'Seleccionar beneficiario/a'
   queries:
     index:
       title: 'Reportes'

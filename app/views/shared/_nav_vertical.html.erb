@@ -1,5 +1,5 @@
-<%= link_to root_path do %>
-  <h1><%= t('app_name') %></h1>
+<%= link_to root_path, class: 'mb-4' do %>
+  <%= image_tag 'logo.png', alt: 'Logo IVD' %>
 <% end %>
 
 <%= render partial: 'shared/items' %>

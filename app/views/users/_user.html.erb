@@ -1,10 +1,27 @@
-<div id="<%= dom_id user %>" class="user">
-  <%= user.email %>
-  <%= user.username %>
-  <!-- <%= link_to "Show this user", user %> -->
-  <%= link_to t('.edit'), edit_user_path(user) %>
-  <%= link_to t('.delete'), user_path(user), data: {
-    turbo_method: :delete,
-    turbo_confirm: t('common.confirm')
-  } unless user.owner? %>
+<div id="<%= dom_id user %>" class="user col">
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <%= image_tag 'avatar.jpg', class: 'img-fluid rounded-start', alt: 'Avatar User' %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body p-2 py-1">
+          <h5 class="card-title"><%= user.username %></h5>
+          <p class="card-text m-0"><%= user.email %></p>
+          <p class="card-text">
+            <span><%= content_tag :span, "Super Admin", class: "badge text-bg-warning" if user.super_admin? %></span>
+            <span><%= content_tag :span, "Admin", class: "badge text-bg-info" if user.admin? %></span>
+          </p>
+          <span class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <!-- <%= link_to "Show this user", user %> -->
+            <%= link_to t('.edit'), edit_user_path(user), class: "me-md-2" %>
+            <%= link_to t('.delete'), user_path(user), data: {
+              turbo_method: :delete,
+              turbo_confirm: t('common.confirm')
+            } unless user.owner? %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

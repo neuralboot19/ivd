@@ -11,16 +11,24 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.collection_select :beneficiary_id, @beneficiaries, :id, :names %>
+  <div class="row mb-3">
+    <div class="col">
+      <div class="form-floating">
+        <%= form.collection_select :beneficiary_id, @beneficiaries, :id, :names, {:style=>'width:100%'},html_options = {class: "form-select"} %>
+        <%= form.label t(".select"), class: "form-label" %>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating">
+        <%= form.text_field :kg, class: "form-control" %>
+        <%= form.label :kg, class: "form-label" %>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :kg %>
-    <%= form.text_field :kg %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="row justify-content-end">
+    <div class="col-auto">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>

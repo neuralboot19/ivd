@@ -11,62 +11,84 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :names %>
-    <%= form.text_field :names, required: true %>
+  <div class="row mb-3">
+    <div class="col">
+      <div class="form-floating">
+        <%= form.text_field :names, class: "form-control", placeholder: t(".names"), required: true %>
+        <%= form.label :names, class: "form-label" %>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating">
+        <%= form.text_field :first_surname, class: "form-control", placeholder: t(".first_surname"), required: true %>
+        <%= form.label :first_surname, class: "form-label" %>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating">
+        <%= form.text_field :second_surname, class: "form-control", placeholder: t(".second_surname"), required: true %>
+        <%= form.label :second_surname, class: "form-label" %>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :first_surname %>
-    <%= form.text_field :first_surname, required: true %>
+  <div class="row mb-3">
+    <div class="col-4">
+      <div class="form-floating">
+        <%= form.text_field :email, class: "form-control", placeholder: t(".email"), required: true %>
+        <%= form.label :email, class: "form-label" %>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating">
+        <%= form.text_field :other_address, class: "form-control", placeholder: t(".other_address"), required: true %>
+        <%= form.label :other_address, class: "form-label" %>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :second_surname %>
-    <%= form.text_field :second_surname, required: true %>
+  <div class="row mb-3">
+    <div class="col">
+      <div class="form-floating">
+        <%= form.number_field :cel_phone, class: "form-control", placeholder: t(".cel_phone"), required: true, max: 999999999 %>
+        <%= form.label :cel_phone, class: "form-label" %>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating">
+        <%= form.text_field :born, class: "form-control", required: true, type: :date, value: form.object.born.try(:strftime,"%Y-%m-%d") %>
+        <%= form.label :born, class: "form-label" %>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating">
+        <%= form.text_field :expiration_date_document, class: "form-control", required: true, type: :date, value: form.object.expiration_date_document.try(:strftime,"%Y-%m-%d") %>
+        <%= form.label :expiration_date_document, class: "form-label" %>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating">
+        <%= form.number_field :family_unit, class: "form-control", required: true, max: 99 %>
+        <%= form.label :family_unit, class: "form-label" %>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :email %>
-    <%= form.text_field :email, required: true %>
-  </div>
-
-  <div>
-    <%= form.label :cel_phone %>
-    <%= form.number_field :cel_phone, required: true, max: 999999999 %>
-  </div>
-
-  <div>
-    <%= form.label :born %>
-    <%= form.text_field :born, required: true, type: :date, value: form.object.born.try(:strftime,"%Y-%m-%d") %>
-  </div>
-
-  <div>
-    <%= form.label :other_address %>
-    <%= form.text_field :other_address, required: true %>
-  </div>
-
-  <div>
-    <%= form.label :expiration_date_document %>
-    <%= form.text_field :expiration_date_document, required: true, type: :date, value: form.object.expiration_date_document.try(:strftime,"%Y-%m-%d") %>
-  </div>
-
-  <div>
-    <%= form.label :status_document %>
-    <%= form.check_box :status_document %>
-  </div>
-
-  <div>
-    <%= form.label :family_unit %>
-    <%= form.number_field :family_unit, required: true, max: 99 %>
-  </div>
-
-  <div>
-    <%= form.label :terms_conditions %>
-    <%= form.check_box :terms_conditions %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="row justify-content-end">
+    <div class="col-auto">
+      <div class="row mb-3">
+        <div class="col">
+          <%= form.label :status_document, class: "form-label" %>
+          <%= form.check_box :status_document, class: "form-check-input" %>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <%= form.label :terms_conditions, class: "form-label" %>
+          <%= form.check_box :terms_conditions, class: "form-check-input" %>
+        </div>
+      </div>
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>

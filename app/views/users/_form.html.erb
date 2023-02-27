@@ -11,32 +11,49 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :email %>
-    <%= form.text_field :email, required: true %>
+  <div class="row mb-3">
+    <div class="col">
+      <div class="form-floating">
+        <%= form.email_field :email, class: "form-control", placeholder: t('.email'), required: true %>
+        <%= form.label :email, class: "form-label" %>
+      </div>
+      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+    </div>
+    <div class="col">
+      <div class="input-group">
+        <div class="input-group-text">@</div>
+        <div class="form-floating">
+          <%= form.text_field :username, class: "form-control", placeholder: t('.username'), required: true %>
+          <%= form.label :username %>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :username %>
-    <%= form.text_field :username, required: true %>
+  <div class="row mb-3 align-items-center">
+    <div class="col">
+      <div class="form-floating">
+        <%= form.password_field :password, class: "form-control", placeholder: t('.password'), required: true %>
+        <%= form.label :password, class: "form-label" %>
+      </div>
+    </div>
+    <div class="col">
+      <div class="row justify-content-between">
+        <div class="col">
+          <%= form.check_box :admin, class: "form-check-input" %>
+          <%= form.label :admin, class: "form-check-label" %>
+        </div>
+        <div class="col">
+          <%= form.check_box :super_admin, class: "form-check-input" %>
+          <%= form.label :super_admin, class: "form-check-label" %>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :password %>
-    <%= form.password_field :password, required: true %>
-  </div>
-
-  <div>
-    <%= form.label :admin %>
-    <%= form.check_box :admin %>
-  </div>
-
-  <div>
-    <%= form.label :super_admin %>
-    <%= form.check_box :super_admin %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="row justify-content-end">
+    <div class="col-auto">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>

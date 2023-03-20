@@ -8,7 +8,7 @@ class ItemUserComponent < ViewComponent::Base
   end
 
   def classes
-    "nav-link #{is_active}"
+    "nav-link #{is_active} w-100"
   end
 
   def active?

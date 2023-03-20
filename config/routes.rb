@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   resources :users, except: :show
   resources :beneficiaries, except: :show
   resources :deliveries, except: :show
-  root "dashboard#index"
+  root "deliveries#new"
 end

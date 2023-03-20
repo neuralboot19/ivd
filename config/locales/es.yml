@@ -38,9 +38,6 @@ es:
     not_logged_in: 'Tienes que hacer login'
     not_authorized: 'No tienes permisos para esta acción'
     not_found: 'No se ha encontrado'
-  dashboard:
-    index:
-      title: 'Bienvenido a IVD'
   shared:
     items:
       # users: 'Usuarios'
